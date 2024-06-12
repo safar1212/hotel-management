@@ -1,5 +1,9 @@
 <h2>All students data</h2>
 
+{{-- <a  href="{{ newstudent }}">Add New</a> --}}
+<a href="{{ route('newstudent') }}">Add New</a>
+
+
 @foreach ( $data as $id => $student)
     <h3>
        | {{$student->name}} |
