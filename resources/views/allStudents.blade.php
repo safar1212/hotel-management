@@ -6,6 +6,8 @@
         {{$student->age}} |
         {{-- {{$student->email}} | --}}
         <a href="{{route('view.student', $student->id)}}" >View Student</a> |
+        <a href="{{route('delete.student', $student->id)}}" >delete Student</a> |
+
         
      
     </h3>

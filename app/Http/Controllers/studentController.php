@@ -34,4 +34,12 @@ class studentController extends Controller
         // return view('allStudents',['data'=> $students]);
         return view('student', ['data'=> $students]);
     }
+
+    public function deleteStudent(string $id) {
+        $student = DB::table('students')->where('id', $id)->delete();
+
+        if($student) {
+            return redirect()->route('students');
+        }
+    }
 }

@@ -6,8 +6,10 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/allStudents', [studentController::class, 'showStudent']);
+Route::get('/allStudents', [studentController::class, 'showStudent'])->name('students');
 Route::get('/allStudents/{id}', [studentController::class, 'singleStudent'])->name('view.student');
+Route::get('/delete/{id}', [studentController::class, 'deleteStudent'])->name('delete.student');
+
 
 
 Route::get('/dashboard', function () {
